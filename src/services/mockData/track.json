@@ -1,0 +1,137 @@
+[
+  {
+    "id": "1",
+    "title": "Blinding Lights",
+    "artist": "The Weeknd",
+    "album": "After Hours",
+    "duration": 200,
+    "coverUrl": "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=400&fit=crop",
+    "audioUrl": "https://www.soundjay.com/misc/sounds/magic-chime-02.wav"
+  },
+  {
+    "id": "2",
+    "title": "Shape of You",
+    "artist": "Ed Sheeran",
+    "album": "÷ (Divide)",
+    "duration": 233,
+    "coverUrl": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=400&h=400&fit=crop",
+    "audioUrl": "https://www.soundjay.com/misc/sounds/magic-chime-02.wav"
+  },
+  {
+    "id": "3",
+    "title": "Don't Start Now",
+    "artist": "Dua Lipa",
+    "album": "Future Nostalgia",
+    "duration": 183,
+    "coverUrl": "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=400&h=400&fit=crop",
+    "audioUrl": "https://www.soundjay.com/misc/sounds/magic-chime-02.wav"
+  },
+  {
+    "id": "4",
+    "title": "Watermelon Sugar",
+    "artist": "Harry Styles",
+    "album": "Fine Line",
+    "duration": 174,
+    "coverUrl": "https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=400&h=400&fit=crop",
+    "audioUrl": "https://www.soundjay.com/misc/sounds/magic-chime-02.wav"
+  },
+  {
+    "id": "5",
+    "title": "Levitating",
+    "artist": "Dua Lipa",
+    "album": "Future Nostalgia",
+    "duration": 203,
+    "coverUrl": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=400&h=400&fit=crop",
+    "audioUrl": "https://www.soundjay.com/misc/sounds/magic-chime-02.wav"
+  },
+  {
+    "id": "6",
+    "title": "Good 4 U",
+    "artist": "Olivia Rodrigo",
+    "album": "SOUR",
+    "duration": 178,
+    "coverUrl": "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=400&fit=crop",
+    "audioUrl": "https://www.soundjay.com/misc/sounds/magic-chime-02.wav"
+  },
+  {
+    "id": "7",
+    "title": "As It Was",
+    "artist": "Harry Styles",
+    "album": "Harry's House",
+    "duration": 167,
+    "coverUrl": "https://images.unsplash.com/photo-1506157786151-b8491531f063?w=400&h=400&fit=crop",
+    "audioUrl": "https://www.soundjay.com/misc/sounds/magic-chime-02.wav"
+  },
+  {
+    "id": "8",
+    "title": "Heat Waves",
+    "artist": "Glass Animals",
+    "album": "Dreamland",
+    "duration": 238,
+    "coverUrl": "https://images.unsplash.com/photo-1571330735066-03aaa9429d89?w=400&h=400&fit=crop",
+    "audioUrl": "https://www.soundjay.com/misc/sounds/magic-chime-02.wav"
+  },
+  {
+    "id": "9",
+    "title": "Anti-Hero",
+    "artist": "Taylor Swift",
+    "album": "Midnights",
+    "duration": 200,
+    "coverUrl": "https://images.unsplash.com/photo-1487180144351-b8472da7d491?w=400&h=400&fit=crop",
+    "audioUrl": "https://www.soundjay.com/misc/sounds/magic-chime-02.wav"
+  },
+  {
+    "id": "10",
+    "title": "Bad Habit",
+    "artist": "Steve Lacy",
+    "album": "Gemini Rights",
+    "duration": 220,
+    "coverUrl": "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=400&fit=crop",
+    "audioUrl": "https://www.soundjay.com/misc/sounds/magic-chime-02.wav"
+  },
+  {
+    "id": "11",
+    "title": "Industry Baby",
+    "artist": "Lil Nas X ft. Jack Harlow",
+    "album": "MONTERO",
+    "duration": 212,
+    "coverUrl": "https://images.unsplash.com/photo-1520637836862-4d197d17c2a4?w=400&h=400&fit=crop",
+    "audioUrl": "https://www.soundjay.com/misc/sounds/magic-chime-02.wav"
+  },
+  {
+    "id": "12",
+    "title": "Flowers",
+    "artist": "Miley Cyrus",
+    "album": "Endless Summer Vacation",
+    "duration": 200,
+    "coverUrl": "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=400&fit=crop",
+    "audioUrl": "https://www.soundjay.com/misc/sounds/magic-chime-02.wav"
+  },
+  {
+    "id": "13",
+    "title": "Unholy",
+    "artist": "Sam Smith ft. Kim Petras",
+    "album": "Gloria",
+    "duration": 156,
+    "coverUrl": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=400&h=400&fit=crop",
+    "audioUrl": "https://www.soundjay.com/misc/sounds/magic-chime-02.wav"
+  },
+  {
+    "id": "14",
+    "title": "Running Up That Hill",
+    "artist": "Kate Bush",
+    "album": "Hounds of Love",
+    "duration": 297,
+    "coverUrl": "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=400&h=400&fit=crop",
+    "audioUrl": "https://www.soundjay.com/misc/sounds/magic-chime-02.wav"
+  },
+  {
+    "id": "15",
+    "title": "Creepin'",
+    "artist": "Metro Boomin, The Weeknd, 21 Savage",
+    "album": "Heroes & Villains",
+    "duration": 221,
+    "coverUrl": "https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=400&h=400&fit=crop",
+    "audioUrl": "https://www.soundjay.com/misc/sounds/magic-chime-02.wav"
+  }
+]

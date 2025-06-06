@@ -1,0 +1,72 @@
+[
+  {
+    "id": "1",
+    "name": "Today's Top Hits",
+    "tracks": [],
+    "coverUrl": "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=400&fit=crop",
+    "createdAt": "2024-01-15T10:30:00Z"
+  },
+  {
+    "id": "2",
+    "name": "Chill Vibes",
+    "tracks": [],
+    "coverUrl": "https://images.unsplash.com/photo-1506157786151-b8491531f063?w=400&h=400&fit=crop",
+    "createdAt": "2024-01-12T14:20:00Z"
+  },
+  {
+    "id": "3",
+    "name": "Workout Mix",
+    "tracks": [],
+    "coverUrl": "https://images.unsplash.com/photo-1571330735066-03aaa9429d89?w=400&h=400&fit=crop",
+    "createdAt": "2024-01-10T09:15:00Z"
+  },
+  {
+    "id": "4",
+    "name": "Study Session",
+    "tracks": [],
+    "coverUrl": "https://images.unsplash.com/photo-1487180144351-b8472da7d491?w=400&h=400&fit=crop",
+    "createdAt": "2024-01-08T16:45:00Z"
+  },
+  {
+    "id": "5",
+    "name": "Road Trip",
+    "tracks": [],
+    "coverUrl": "https://images.unsplash.com/photo-1520637836862-4d197d17c2a4?w=400&h=400&fit=crop",
+    "createdAt": "2024-01-05T11:30:00Z"
+  },
+  {
+    "id": "6",
+    "name": "Late Night",
+    "tracks": [],
+    "coverUrl": "https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=400&h=400&fit=crop",
+    "createdAt": "2024-01-03T22:15:00Z"
+  },
+  {
+    "id": "7",
+    "name": "Feel Good Friday",
+    "tracks": [],
+    "coverUrl": "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=400&h=400&fit=crop",
+    "createdAt": "2024-01-01T18:00:00Z"
+  },
+  {
+    "id": "8",
+    "name": "Sunday Morning",
+    "tracks": [],
+    "coverUrl": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=400&h=400&fit=crop",
+    "createdAt": "2023-12-28T08:45:00Z"
+  },
+  {
+    "id": "9",
+    "name": "Party Time",
+    "tracks": [],
+    "coverUrl": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=400&h=400&fit=crop",
+    "createdAt": "2023-12-25T20:30:00Z"
+  },
+  {
+    "id": "10",
+    "name": "Throwback Hits",
+    "tracks": [],
+    "coverUrl": "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=400&fit=crop",
+    "createdAt": "2023-12-22T15:20:00Z"
+  }
+]

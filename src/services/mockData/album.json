@@ -1,0 +1,98 @@
+[
+  {
+    "id": "1",
+    "name": "After Hours",
+    "artist": "The Weeknd",
+    "tracks": [],
+    "coverUrl": "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=400&fit=crop",
+    "year": 2020
+  },
+  {
+    "id": "2",
+    "name": "÷ (Divide)",
+    "artist": "Ed Sheeran",
+    "tracks": [],
+    "coverUrl": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=400&h=400&fit=crop",
+    "year": 2017
+  },
+  {
+    "id": "3",
+    "name": "Future Nostalgia",
+    "artist": "Dua Lipa",
+    "tracks": [],
+    "coverUrl": "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=400&h=400&fit=crop",
+    "year": 2020
+  },
+  {
+    "id": "4",
+    "name": "Fine Line",
+    "artist": "Harry Styles",
+    "tracks": [],
+    "coverUrl": "https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=400&h=400&fit=crop",
+    "year": 2019
+  },
+  {
+    "id": "5",
+    "name": "SOUR",
+    "artist": "Olivia Rodrigo",
+    "tracks": [],
+    "coverUrl": "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=400&fit=crop",
+    "year": 2021
+  },
+  {
+    "id": "6",
+    "name": "Harry's House",
+    "artist": "Harry Styles",
+    "tracks": [],
+    "coverUrl": "https://images.unsplash.com/photo-1506157786151-b8491531f063?w=400&h=400&fit=crop",
+    "year": 2022
+  },
+  {
+    "id": "7",
+    "name": "Dreamland",
+    "artist": "Glass Animals",
+    "tracks": [],
+    "coverUrl": "https://images.unsplash.com/photo-1571330735066-03aaa9429d89?w=400&h=400&fit=crop",
+    "year": 2020
+  },
+  {
+    "id": "8",
+    "name": "Midnights",
+    "artist": "Taylor Swift",
+    "tracks": [],
+    "coverUrl": "https://images.unsplash.com/photo-1487180144351-b8472da7d491?w=400&h=400&fit=crop",
+    "year": 2022
+  },
+  {
+    "id": "9",
+    "name": "Gemini Rights",
+    "artist": "Steve Lacy",
+    "tracks": [],
+    "coverUrl": "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=400&fit=crop",
+    "year": 2022
+  },
+  {
+    "id": "10",
+    "name": "MONTERO",
+    "artist": "Lil Nas X",
+    "tracks": [],
+    "coverUrl": "https://images.unsplash.com/photo-1520637836862-4d197d17c2a4?w=400&h=400&fit=crop",
+    "year": 2021
+  },
+  {
+    "id": "11",
+    "name": "Endless Summer Vacation",
+    "artist": "Miley Cyrus",
+    "tracks": [],
+    "coverUrl": "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=400&fit=crop",
+    "year": 2023
+  },
+  {
+    "id": "12",
+    "name": "Gloria",
+    "artist": "Sam Smith",
+    "tracks": [],
+    "coverUrl": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=400&h=400&fit=crop",
+    "year": 2023
+  }
+]
