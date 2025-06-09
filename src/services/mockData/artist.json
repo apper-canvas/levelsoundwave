@@ -1,0 +1,125 @@
+[
+  {
+    "id": "1",
+    "name": "Taylor Swift",
+    "image": "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=400&fit=crop&crop=face",
+    "coverImage": "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=1200&h=400&fit=crop",
+    "followers": 89500000,
+    "monthlyListeners": 83200000,
+    "verified": true,
+    "genres": ["Pop", "Country", "Alternative"],
+    "biography": "Taylor Alison Swift is an American singer-songwriter. Known for her autobiographical songwriting and artistic reinventions, Swift is one of the most influential artists of the 21st century and a prominent cultural figure. She began her career in country music before transitioning to pop with her 2014 album '1989'. Swift has received numerous accolades including 12 Grammy Awards, 40 American Music Awards, and 29 Billboard Music Awards. She is the only artist to win the Grammy Award for Album of the Year three times for solo work. Swift is also known for her philanthropy, political activism, and business acumen.",
+    "socialLinks": {
+      "instagram": "https://instagram.com/taylorswift",
+      "twitter": "https://twitter.com/taylorswift13",
+      "spotify": "https://open.spotify.com/artist/06HL4z0CvFAxyc27GXpf02",
+      "website": "https://taylorswift.com"
+    },
+    "topTracks": ["1", "5", "9", "13", "17"],
+    "discography": [
+      {
+        "id": "ts1",
+        "title": "Midnights",
+        "year": 2022,
+        "type": "Album",
+        "image": "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=300&h=300&fit=crop",
+        "trackCount": 13,
+        "duration": "44:32"
+      },
+      {
+        "id": "ts2",
+        "title": "folklore",
+        "year": 2020,
+        "type": "Album",
+        "image": "https://images.unsplash.com/photo-1515552518906-7074db61b52b?w=300&h=300&fit=crop",
+        "trackCount": 16,
+        "duration": "63:29"
+      },
+      {
+        "id": "ts3",
+        "title": "Lover",
+        "year": 2019,
+        "type": "Album",
+        "image": "https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=300&h=300&fit=crop",
+        "trackCount": 18,
+        "duration": "61:48"
+      }
+    ]
+  },
+  {
+    "id": "2",
+    "name": "The Weeknd",
+    "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face",
+    "coverImage": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1200&h=400&fit=crop",
+    "followers": 45200000,
+    "monthlyListeners": 87600000,
+    "verified": true,
+    "genres": ["R&B", "Pop", "Alternative R&B"],
+    "biography": "Abel Makkonen Tesfaye, known professionally as The Weeknd, is a Canadian singer, songwriter, and record producer. Known for his sonic versatility and dark lyricism, his music explores escapism, romance, and melancholia, and is often inspired by personal experiences. He has received numerous accolades, including four Grammy Awards, 20 Billboard Music Awards, 17 Juno Awards, six American Music Awards, two MTV Video Music Awards, and nominations for an Academy Award and a Golden Globe Award.",
+    "socialLinks": {
+      "instagram": "https://instagram.com/theweeknd",
+      "twitter": "https://twitter.com/theweeknd",
+      "spotify": "https://open.spotify.com/artist/1Xyo4u8uXC1ZmMpatF05PJ",
+      "website": "https://theweeknd.com"
+    },
+    "topTracks": ["2", "6", "10", "14", "18"],
+    "discography": [
+      {
+        "id": "tw1",
+        "title": "After Hours",
+        "year": 2020,
+        "type": "Album",
+        "image": "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=300&h=300&fit=crop",
+        "trackCount": 14,
+        "duration": "56:17"
+      },
+      {
+        "id": "tw2",
+        "title": "Starboy",
+        "year": 2016,
+        "type": "Album",
+        "image": "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=300&h=300&fit=crop",
+        "trackCount": 18,
+        "duration": "68:31"
+      }
+    ]
+  },
+  {
+    "id": "3",
+    "name": "Billie Eilish",
+    "image": "https://images.unsplash.com/photo-1494790108755-2616c273e15d?w=400&h=400&fit=crop&crop=face",
+    "coverImage": "https://images.unsplash.com/photo-1494790108755-2616c273e15d?w=1200&h=400&fit=crop",
+    "followers": 38900000,
+    "monthlyListeners": 61400000,
+    "verified": true,
+    "genres": ["Alternative Pop", "Electropop", "Indie Pop"],
+    "biography": "Billie Eilish Pirate Baird O'Connell is an American singer and songwriter. She first gained public attention in 2015 with her debut single 'Ocean Eyes', written and produced by her brother Finneas O'Connell, with whom she collaborates on music and live shows. Her commercially successful debut album, 'When We All Fall Asleep, Where Do We Go?' (2019), became the best-performing album of 2019 in the US and reached the top of the charts in the UK, Canada, and Australia.",
+    "socialLinks": {
+      "instagram": "https://instagram.com/billieeilish",
+      "twitter": "https://twitter.com/billieeilish",
+      "spotify": "https://open.spotify.com/artist/6qqNVTkY8uBg9cP3Jd8DAH",
+      "website": "https://billieeilish.com"
+    },
+    "topTracks": ["3", "7", "11", "15", "19"],
+    "discography": [
+      {
+        "id": "be1",
+        "title": "Happier Than Ever",
+        "year": 2021,
+        "type": "Album",
+        "image": "https://images.unsplash.com/photo-1515552518906-7074db61b52b?w=300&h=300&fit=crop",
+        "trackCount": 16,
+        "duration": "56:47"
+      },
+      {
+        "id": "be2",
+        "title": "When We All Fall Asleep, Where Do We Go?",
+        "year": 2019,
+        "type": "Album",
+        "image": "https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=300&h=300&fit=crop",
+        "trackCount": 14,
+        "duration": "43:12"
+      }
+    ]
+  }
+]

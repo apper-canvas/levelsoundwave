@@ -1,10 +1,10 @@
+import { useEffect, useState } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import Home from './pages/Home'
+import ArtistDetail from './pages/ArtistDetail'
 import NotFound from './pages/NotFound'
-import { useEffect, useState } from 'react'
-
 function App() {
   const [darkMode, setDarkMode] = useState(true)
 
@@ -29,10 +29,11 @@ function App() {
     }
   }
 
-  return (
+return (
     <div className="min-h-screen bg-black text-white">
       <Routes>
         <Route path="/" element={<Home toggleDarkMode={toggleDarkMode} darkMode={darkMode} />} />
+        <Route path="/artist/:id" element={<ArtistDetail />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <ToastContainer
