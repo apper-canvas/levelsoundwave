@@ -111,9 +111,9 @@ const ArtistDetail = () => {
     }
   }
 
-  if (loading) {
+if (loading) {
     return (
-      <div className="min-h-screen bg-black text-white">
+      <div className="min-h-screen bg-background text-foreground">
         <div className="flex items-center justify-center h-screen">
           <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary"></div>
         </div>
@@ -121,12 +121,12 @@ const ArtistDetail = () => {
     )
   }
 
-  if (error || !artist) {
+if (error || !artist) {
     return (
-      <div className="min-h-screen bg-black text-white">
+      <div className="min-h-screen bg-background text-foreground">
         <div className="flex flex-col items-center justify-center h-screen">
           <h1 className="text-2xl font-bold mb-4">Artist Not Found</h1>
-          <p className="text-gray-400 mb-6">{error || 'The artist you are looking for does not exist.'}</p>
+          <p className="text-foreground-secondary mb-6">{error || 'The artist you are looking for does not exist.'}</p>
           <button
             onClick={() => navigate('/')}
             className="bg-primary hover:bg-primary-light px-6 py-3 rounded-full font-semibold transition-colors"
@@ -139,7 +139,7 @@ const ArtistDetail = () => {
   }
 
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="min-h-screen bg-background text-foreground">
       {/* Header */}
       <div className="relative h-96 overflow-hidden">
         <img
@@ -147,12 +147,12 @@ const ArtistDetail = () => {
           alt={artist.name}
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent" />
+<div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent" />
         
         {/* Back Button */}
         <button
           onClick={() => navigate('/')}
-          className="absolute top-6 left-6 p-2 rounded-full bg-black/50 hover:bg-black/70 transition-colors"
+          className="absolute top-6 left-6 p-2 rounded-full bg-background/50 hover:bg-background/70 border border-border transition-colors"
           aria-label="Go back"
         >
           <ChevronLeft className="w-6 h-6" />
@@ -178,7 +178,7 @@ const ArtistDetail = () => {
                 <span className="text-sm font-medium">Verified Artist</span>
               </div>
               <h1 className="text-5xl font-bold mb-4">{artist.name}</h1>
-              <div className="flex items-center gap-6 text-gray-300">
+<div className="flex items-center gap-6 text-foreground-secondary">
                 <span className="flex items-center gap-1">
                   <Users className="w-4 h-4" />
                   {formatNumber(artist.followers)} followers
@@ -194,9 +194,9 @@ const ArtistDetail = () => {
       <div className="px-8 py-6 flex items-center gap-4">
         <button
           onClick={handleFollow}
-          className={`px-8 py-3 rounded-full font-semibold transition-colors ${
+className={`px-8 py-3 rounded-full font-semibold transition-colors ${
             following 
-              ? 'bg-gray-800 hover:bg-gray-700 text-white' 
+              ? 'bg-card hover:bg-card-hover text-foreground border border-border' 
               : 'bg-primary hover:bg-primary-light text-black'
           }`}
         >
@@ -204,7 +204,7 @@ const ArtistDetail = () => {
         </button>
         <button
           onClick={handleShare}
-          className="p-3 rounded-full border border-gray-600 hover:border-white transition-colors"
+          className="p-3 rounded-full border border-border hover:border-foreground transition-colors"
           aria-label="Share artist"
         >
           <Share2 className="w-5 h-5" />
@@ -218,8 +218,8 @@ const ArtistDetail = () => {
             {/* Biography */}
             <section>
               <h2 className="text-2xl font-bold mb-4">About</h2>
-              <div className="glassmorphism rounded-xl p-6">
-                <p className="text-gray-300 leading-relaxed">
+<div className="glassmorphism rounded-xl p-6">
+                <p className="text-foreground-secondary leading-relaxed">
                   {showFullBio ? artist.biography : `${artist.biography.substring(0, 300)}...`}
                 </p>
                 <button

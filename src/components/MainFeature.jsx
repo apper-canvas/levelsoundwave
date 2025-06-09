@@ -256,10 +256,10 @@ const MainFeature = ({ tracks }) => {
               <ApperIcon 
                 name={isMuted || volume === 0 ? "VolumeX" : volume < 50 ? "Volume1" : "Volume2"} 
                 size={16} 
-              />
+/>
             </button>
             {showVolume && (
-              <div className="absolute bottom-full mb-2 right-0 bg-surface-800 p-2 rounded-lg">
+              <div className="absolute bottom-full mb-2 right-0 bg-card border border-border p-2 rounded-lg shadow-theme">
                 <input
                   type="range"
                   min="0"
@@ -276,25 +276,25 @@ const MainFeature = ({ tracks }) => {
 
       {/* Queue Panel */}
       <AnimatePresence>
-        {showQueue && (
+{showQueue && (
           <motion.div
             initial={{ x: '100%' }}
             animate={{ x: 0 }}
             exit={{ x: '100%' }}
-            className="fixed right-0 top-0 w-80 h-full bg-surface-900 border-l border-gray-800 z-40 p-6"
+            className="fixed right-0 top-0 w-80 h-full bg-background-secondary border-l border-border z-40 p-6"
           >
             <div className="flex items-center justify-between mb-6">
               <h3 className="text-lg font-semibold">Queue</h3>
               <button
                 onClick={() => setShowQueue(false)}
-                className="text-gray-400 hover:text-white transition-colors"
+                className="text-foreground-secondary hover:text-foreground transition-colors"
               >
                 <ApperIcon name="X" size={20} />
               </button>
             </div>
             
             <div className="space-y-2 overflow-y-auto max-h-96">
-              <div className="text-sm text-gray-400 mb-2">Now Playing</div>
+              <div className="text-sm text-foreground-secondary mb-2">Now Playing</div>
               <div className="flex items-center gap-3 p-2 bg-primary bg-opacity-20 rounded">
                 <img 
                   src={currentTrack.coverUrl} 
@@ -303,15 +303,15 @@ const MainFeature = ({ tracks }) => {
                 />
                 <div className="flex-1">
                   <p className="font-medium text-sm">{currentTrack.title}</p>
-                  <p className="text-gray-400 text-xs">{currentTrack.artist}</p>
+                  <p className="text-foreground-secondary text-xs">{currentTrack.artist}</p>
                 </div>
-              </div>
+</div>
               
-              {queue.length > 0 && (
+              {queue.length > 0 ? (
                 <>
-                  <div className="text-sm text-gray-400 mt-4 mb-2">Next in Queue</div>
+                  <div className="text-sm text-foreground-secondary mt-4 mb-2">Next in Queue</div>
                   {queue.map((track, index) => (
-                    <div key={`${track.id}-${index}`} className="flex items-center gap-3 p-2 rounded hover:bg-surface-800 group">
+                    <div key={`${track.id}-${index}`} className="flex items-center gap-3 p-2 rounded hover:bg-card-hover group">
                       <img 
                         src={track.coverUrl} 
                         alt={track.album}
@@ -319,21 +319,19 @@ const MainFeature = ({ tracks }) => {
                       />
                       <div className="flex-1">
                         <p className="font-medium text-sm">{track.title}</p>
-                        <p className="text-gray-400 text-xs">{track.artist}</p>
+                        <p className="text-foreground-secondary text-xs">{track.artist}</p>
                       </div>
                       <button
                         onClick={() => removeFromQueue(index)}
-                        className="opacity-0 group-hover:opacity-100 text-gray-400 hover:text-white transition-all"
+                        className="opacity-0 group-hover:opacity-100 text-foreground-secondary hover:text-foreground transition-all"
                       >
                         <ApperIcon name="X" size={14} />
                       </button>
                     </div>
                   ))}
                 </>
-              )}
-              
-              {queue.length === 0 && (
-                <p className="text-gray-400 text-sm text-center py-8">
+              ) : (
+                <p className="text-foreground-secondary text-sm text-center py-8">
                   No tracks in queue
                 </p>
               )}

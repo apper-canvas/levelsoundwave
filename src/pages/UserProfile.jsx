@@ -72,24 +72,24 @@ const UserProfile = () => {
     }))
   }
 
-  if (loading) {
+if (loading) {
     return (
-      <div className="min-h-screen bg-black text-white flex items-center justify-center">
+      <div className="min-h-screen bg-background text-foreground flex items-center justify-center">
         <div className="text-center">
           <div className="w-12 h-12 border-t-2 border-primary rounded-full animate-spin mx-auto mb-4"></div>
-          <p className="text-gray-400">Loading profile...</p>
+          <p className="text-foreground-secondary">Loading profile...</p>
         </div>
       </div>
     )
   }
 
-  if (!user) {
+if (!user) {
     return (
-      <div className="min-h-screen bg-black text-white flex items-center justify-center">
+      <div className="min-h-screen bg-background text-foreground flex items-center justify-center">
         <div className="text-center">
-          <User className="w-16 h-16 text-gray-600 mx-auto mb-4" />
+          <User className="w-16 h-16 text-foreground-tertiary mx-auto mb-4" />
           <h2 className="text-xl font-semibold mb-2">Profile Not Found</h2>
-          <p className="text-gray-400 mb-4">Unable to load user profile</p>
+          <p className="text-foreground-secondary mb-4">Unable to load user profile</p>
           <button
             onClick={() => navigate('/')}
             className="px-4 py-2 bg-primary hover:bg-primary-light rounded-lg transition-colors"
@@ -102,13 +102,13 @@ const UserProfile = () => {
   }
 
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="min-h-screen bg-background text-foreground">
       {/* Header */}
-      <div className="bg-gradient-to-b from-gray-900 to-black">
+<div className="bg-gradient-to-b from-background-secondary to-background border-b border-border">
         <div className="max-w-6xl mx-auto px-4 py-6">
           <button
             onClick={() => navigate('/')}
-            className="flex items-center text-gray-400 hover:text-white transition-colors mb-6"
+            className="flex items-center text-foreground-secondary hover:text-foreground transition-colors mb-6"
           >
             <ArrowLeft className="w-5 h-5 mr-2" />
             Back to Home
@@ -147,9 +147,9 @@ const UserProfile = () => {
             </div>
 
             {/* Edit Button */}
-            <button
+<button
               onClick={() => setIsEditing(!isEditing)}
-              className="px-6 py-2 bg-transparent border border-gray-600 hover:border-white rounded-full transition-colors"
+              className="px-6 py-2 bg-transparent border border-border hover:border-foreground rounded-full transition-colors"
             >
               {isEditing ? 'Cancel' : 'Edit Profile'}
             </button>
@@ -177,9 +177,9 @@ const UserProfile = () => {
                     <input
                       type="text"
                       name="name"
-                      value={formData.name}
+value={formData.name}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-white"
+                      className="w-full px-4 py-3 bg-card border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-foreground transition-colors"
                       placeholder="Enter your full name"
                     />
                   </div>
@@ -191,9 +191,9 @@ const UserProfile = () => {
                     <input
                       type="email"
                       name="email"
-                      value={formData.email}
+value={formData.email}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-white"
+                      className="w-full px-4 py-3 bg-card border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-foreground transition-colors"
                       placeholder="Enter your email"
                     />
                   </div>
@@ -208,11 +208,10 @@ const UserProfile = () => {
                       {saving ? 'Saving...' : 'Save Changes'}
                     </button>
                     <button
-                      type="button"
-                      onClick={handleCancel}
-                      className="px-6 py-3 bg-gray-700 hover:bg-gray-600 rounded-lg transition-colors"
+onClick={handleCancel}
+                      className="px-6 py-3 bg-card hover:bg-card-hover border border-border rounded-lg transition-colors"
                     >
-                      Cancel
+Cancel
                     </button>
                   </div>
                 </form>
@@ -222,16 +221,16 @@ const UserProfile = () => {
                     <label className="block text-sm font-medium text-gray-300 mb-2">
                       Full Name
                     </label>
-                    <div className="px-4 py-3 bg-gray-800 rounded-lg text-white">
+<div className="px-4 py-3 bg-card rounded-lg text-foreground border border-border">
                       {user.name}
                     </div>
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium text-gray-300 mb-2">
+                    <label className="block text-sm font-medium text-foreground-secondary mb-2">
                       Email Address
                     </label>
-                    <div className="px-4 py-3 bg-gray-800 rounded-lg text-white">
+                    <div className="px-4 py-3 bg-card rounded-lg text-foreground border border-border">
                       {user.email}
                     </div>
                   </div>

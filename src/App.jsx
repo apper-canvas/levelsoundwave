@@ -31,8 +31,8 @@ function App() {
   }
 
 return (
-    <div className="min-h-screen bg-black text-white">
-<Routes>
+<div className="min-h-screen bg-background text-foreground transition-colors duration-300">
+      <Routes>
         <Route path="/" element={<Home toggleDarkMode={toggleDarkMode} darkMode={darkMode} />} />
         <Route path="/artist/:id" element={<ArtistDetail />} />
         <Route path="/profile" element={<UserProfile />} />
@@ -48,7 +48,7 @@ return (
         pauseOnFocusLoss
         draggable
         pauseOnHover
-        theme="dark"
+        theme={darkMode ? "dark" : "light"}
       />
     </div>
   )

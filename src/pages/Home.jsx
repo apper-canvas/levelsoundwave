@@ -63,12 +63,12 @@ const Home = ({ toggleDarkMode, darkMode }) => {
     { id: 'library', icon: 'ListMusic', label: 'Your Library' },
   ]
 
-  if (loading) {
+if (loading) {
     return (
-      <div className="min-h-screen bg-black flex items-center justify-center">
+      <div className="min-h-screen bg-background flex items-center justify-center">
         <div className="text-center">
           <ApperIcon name="Loader" className="animate-spin w-8 h-8 mx-auto mb-4 text-primary" />
-          <p className="text-gray-400">Loading your music...</p>
+          <p className="text-foreground-secondary">Loading your music...</p>
         </div>
       </div>
     )
@@ -76,7 +76,7 @@ const Home = ({ toggleDarkMode, darkMode }) => {
 
   if (error) {
     return (
-      <div className="min-h-screen bg-black flex items-center justify-center">
+      <div className="min-h-screen bg-background flex items-center justify-center">
         <div className="text-center">
           <ApperIcon name="AlertCircle" className="w-8 h-8 mx-auto mb-4 text-red-500" />
           <p className="text-red-500">Error: {error}</p>
@@ -85,13 +85,13 @@ const Home = ({ toggleDarkMode, darkMode }) => {
     )
   }
 
-  return (
-    <div className="min-h-screen bg-black text-white flex">
+return (
+    <div className="min-h-screen bg-background text-foreground flex">
       {/* Sidebar */}
       <motion.div 
         initial={{ x: -240 }}
         animate={{ x: 0 }}
-        className="w-60 bg-secondary fixed h-full left-0 top-0 p-6 flex flex-col"
+        className="w-60 bg-background-secondary border-r border-border fixed h-full left-0 top-0 p-6 flex flex-col"
       >
         <div className="mb-8">
           <h1 className="text-2xl font-bold text-primary flex items-center gap-2">
@@ -108,7 +108,7 @@ const Home = ({ toggleDarkMode, darkMode }) => {
               className={`w-full flex items-center gap-3 px-3 py-2 rounded-lg transition-all ${
                 activeSection === item.id 
                   ? 'bg-primary text-black' 
-                  : 'text-gray-400 hover:text-white hover:bg-surface-800'
+                  : 'text-foreground-secondary hover:text-foreground hover:bg-card-hover'
               }`}
             >
               <ApperIcon name={item.icon} size={20} />
@@ -117,15 +117,15 @@ const Home = ({ toggleDarkMode, darkMode }) => {
           ))}
         </nav>
 
-        <div className="border-t border-gray-800 pt-6">
-          <h3 className="text-sm font-semibold text-gray-400 mb-4 uppercase tracking-wider">
+<div className="border-t border-border pt-6">
+          <h3 className="text-sm font-semibold text-foreground-secondary mb-4 uppercase tracking-wider">
             Playlists
           </h3>
           <div className="space-y-2 max-h-64 overflow-y-auto scrollbar-hide">
             {playlists?.map(playlist => (
               <button
                 key={playlist.id}
-                className="w-full text-left px-3 py-2 text-gray-400 hover:text-white hover:bg-surface-800 rounded-lg transition-all"
+                className="w-full text-left px-3 py-2 text-foreground-secondary hover:text-foreground hover:bg-card-hover rounded-lg transition-all"
               >
                 {playlist.name}
               </button>
@@ -133,10 +133,10 @@ const Home = ({ toggleDarkMode, darkMode }) => {
           </div>
         </div>
 
-        <div className="mt-auto pt-4 border-t border-gray-800">
+        <div className="mt-auto pt-4 border-t border-border">
           <button
             onClick={toggleDarkMode}
-            className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors"
+            className="flex items-center gap-2 text-foreground-secondary hover:text-foreground transition-colors"
           >
             <ApperIcon name={darkMode ? 'Sun' : 'Moon'} size={16} />
             {darkMode ? 'Light Mode' : 'Dark Mode'}
@@ -145,41 +145,42 @@ const Home = ({ toggleDarkMode, darkMode }) => {
       </motion.div>
 
       {/* Main Content */}
-      <div className="flex-1 ml-60">
-{/* Top Bar */}
-          <div className="flex items-center justify-between p-6 border-b border-gray-800">
-            <div className="flex items-center space-x-4">
-              <div className="flex items-center space-x-2">
-                <Music className="w-8 h-8 text-primary" />
-                <h1 className="text-2xl font-bold">SoundWave</h1>
-              </div>
-            </div>
-
-            <div className="flex items-center space-x-4">
-              {/* Search Bar */}
-              <div className="relative">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
-                <input
-                  type="text"
-                  placeholder="Search songs, artists, albums..."
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  className="pl-10 pr-4 py-2 bg-gray-800 border border-gray-700 rounded-full text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary w-64"
-                />
-              </div>
-
-              {/* Theme Toggle */}
-              <button
-                onClick={toggleDarkMode}
-className="p-2 rounded-full bg-gray-800 hover:bg-gray-700 transition-colors"
-              >
-                {darkMode ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
-              </button>
-
-              {/* Profile Button */}
-              <ProfileButton />
+<div className="flex-1 ml-60">
+        {/* Top Bar */}
+        <div className="flex items-center justify-between p-6 border-b border-border">
+          <div className="flex items-center space-x-4">
+            <div className="flex items-center space-x-2">
+              <Music className="w-8 h-8 text-primary" />
+              <h1 className="text-2xl font-bold">SoundWave</h1>
             </div>
           </div>
+
+          <div className="flex items-center space-x-4">
+            {/* Search Bar */}
+            <div className="relative">
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-foreground-secondary w-4 h-4" />
+              <input
+                type="text"
+                placeholder="Search songs, artists, albums..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="pl-10 pr-4 py-2 bg-card border border-border rounded-full text-foreground placeholder-foreground-secondary focus:outline-none focus:ring-2 focus:ring-primary w-64 transition-colors"
+              />
+            </div>
+
+            {/* Theme Toggle */}
+            <button
+              onClick={toggleDarkMode}
+              className="p-2 rounded-full bg-card hover:bg-card-hover border border-border transition-colors"
+              title={darkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
+            >
+              {darkMode ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
+            </button>
+
+            {/* Profile Button */}
+            <ProfileButton />
+          </div>
+        </div>
 
           {/* Content Area */}
           <div className="p-6">
@@ -193,8 +194,8 @@ className="p-2 rounded-full bg-gray-800 hover:bg-gray-700 transition-colors"
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: index * 0.05 }}
-                      whileHover={{ scale: 1.05 }}
-                      className="bg-surface-800 p-4 rounded-lg cursor-pointer hover:bg-surface-700 transition-all"
+whileHover={{ scale: 1.05 }}
+                      className="bg-card p-4 rounded-lg cursor-pointer hover:bg-card-hover border border-border transition-all"
                     >
                       <img 
                         src={track.coverUrl || '/placeholder-cover.jpg'} 
@@ -202,7 +203,7 @@ className="p-2 rounded-full bg-gray-800 hover:bg-gray-700 transition-colors"
                         className="w-full aspect-square object-cover rounded-lg mb-3"
                       />
                       <h4 className="font-semibold text-sm truncate">{track.title}</h4>
-                      <p className="text-gray-400 text-xs truncate">{track.artist}</p>
+                      <p className="text-foreground-secondary text-xs truncate">{track.artist}</p>
                     </motion.div>
                   ))}
                 </div>
@@ -233,12 +234,12 @@ className="p-2 rounded-full bg-gray-800 hover:bg-gray-700 transition-colors"
                         <ApperIcon name="Play" className="text-white" size={20} />
                       </div>
                     </div>
-                    <div className="flex-1">
+<div className="flex-1">
                       <h4 className="font-medium">{track.title || 'Unknown Title'}</h4>
-                      <p className="text-gray-400 text-sm">{track.artist || 'Unknown Artist'}</p>
+                      <p className="text-foreground-secondary text-sm">{track.artist || 'Unknown Artist'}</p>
                     </div>
-                    <p className="text-gray-400 text-sm">{track.album || 'Unknown Album'}</p>
-                    <p className="text-gray-400 text-sm">
+                    <p className="text-foreground-secondary text-sm">{track.album || 'Unknown Album'}</p>
+                    <p className="text-foreground-secondary text-sm">
                       {track.duration ? `${Math.floor(track.duration / 60)}:${(track.duration % 60).toString().padStart(2, '0')}` : '0:00'}
                     </p>
                   </motion.div>
@@ -253,17 +254,17 @@ className="p-2 rounded-full bg-gray-800 hover:bg-gray-700 transition-colors"
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {playlists?.map(playlist => (
                   <motion.div
-                    key={playlist.id}
+key={playlist.id}
                     whileHover={{ scale: 1.02 }}
-                    className="bg-surface-800 p-6 rounded-xl cursor-pointer hover:bg-surface-700 transition-all"
->
+                    className="bg-card p-6 rounded-xl cursor-pointer hover:bg-card-hover border border-border transition-all"
+                  >
                     <img 
                       src={playlist.coverUrl || '/placeholder-playlist.jpg'} 
                       alt={playlist.name || 'Playlist cover'}
                       className="w-full aspect-square object-cover rounded-lg mb-4"
                     />
                     <h4 className="font-semibold mb-2">{playlist.name || 'Untitled Playlist'}</h4>
-                    <p className="text-gray-400 text-sm">{playlist.tracks?.length || 0} tracks</p>
+                    <p className="text-foreground-secondary text-sm">{playlist.tracks?.length || 0} tracks</p>
                   </motion.div>
                 ))}
               </div>
