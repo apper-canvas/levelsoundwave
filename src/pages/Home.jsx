@@ -1,10 +1,29 @@
 import { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
+import { Search, Play, Pause, SkipBack, SkipForward, Volume2, Moon, Sun, Heart, Plus, Music, Mic2, Clock, TrendingUp, Loader, AlertCircle } from 'lucide-react'
 import { motion } from 'framer-motion'
-import MainFeature from '../components/MainFeature'
-import ApperIcon from '../components/ApperIcon'
-import trackService from '../services/api/trackService'
-import playlistService from '../services/api/playlistService'
+import { toast } from 'react-toastify'
+import { trackService } from '@/services/api/trackService'
+import { albumService } from '@/services/api/albumService' 
+import { playlistService } from '@/services/api/playlistService'
+import ProfileButton from '@/components/ProfileButton'
+import MainFeature from '@/components/MainFeature'
 
+const ApperIcon = ({ name, ...props }) => {
+  const icons = {
+    Loader,
+    AlertCircle,
+    Music,
+    Home: Music,
+    Search,
+    ListMusic: Music,
+    Sun,
+    Moon,
+    Play
+  }
+  const IconComponent = icons[name] || Music
+  return <IconComponent {...props} />
+}
 const Home = ({ toggleDarkMode, darkMode }) => {
   const [tracks, setTracks] = useState([])
   const [playlists, setPlaylists] = useState([])
@@ -127,53 +146,68 @@ const Home = ({ toggleDarkMode, darkMode }) => {
 
       {/* Main Content */}
       <div className="flex-1 ml-60">
-        {/* Header */}
-        <div className="bg-gradient-to-b from-surface-800 to-black p-6">
-          <div className="flex items-center justify-between mb-6">
-            <div className="relative">
-              <ApperIcon name="Search" className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" size={20} />
-              <input
-                type="text"
-                placeholder="Search for songs, artists, or albums"
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="bg-surface-700 text-white pl-10 pr-4 py-2 rounded-full w-80 focus:outline-none focus:ring-2 focus:ring-primary focus:bg-surface-600 transition-all"
-              />
+{/* Top Bar */}
+          <div className="flex items-center justify-between p-6 border-b border-gray-800">
+            <div className="flex items-center space-x-4">
+              <div className="flex items-center space-x-2">
+                <Music className="w-8 h-8 text-primary" />
+                <h1 className="text-2xl font-bold">SoundWave</h1>
+              </div>
+            </div>
+
+            <div className="flex items-center space-x-4">
+              {/* Search Bar */}
+              <div className="relative">
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
+                <input
+                  type="text"
+                  placeholder="Search songs, artists, albums..."
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  className="pl-10 pr-4 py-2 bg-gray-800 border border-gray-700 rounded-full text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary w-64"
+                />
+              </div>
+
+              {/* Theme Toggle */}
+              <button
+                onClick={toggleDarkMode}
+className="p-2 rounded-full bg-gray-800 hover:bg-gray-700 transition-colors"
+              >
+                {darkMode ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
+              </button>
+
+              {/* Profile Button */}
+              <ProfileButton />
             </div>
           </div>
 
-          {activeSection === 'home' && (
-            <div>
-              <h2 className="text-3xl font-bold mb-2">Good evening</h2>
-              <p className="text-gray-400">Your favorite music is waiting for you</p>
-            </div>
-          )}
-        </div>
-
-        {/* Content Area */}
-        <div className="p-6 pb-32">
-          {activeSection === 'home' && (
-            <div>
-              <h3 className="text-xl font-semibold mb-4">Recently Played</h3>
-              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4 mb-8">
-                {tracks?.slice(0, 6).map(track => (
-                  <motion.div
-                    key={track.id}
-                    whileHover={{ scale: 1.05 }}
-                    className="bg-surface-800 p-4 rounded-lg cursor-pointer hover:bg-surface-700 transition-all"
-                  >
-                    <img 
-                      src={track.coverUrl} 
-                      alt={track.album}
-                      className="w-full aspect-square object-cover rounded-lg mb-3"
-                    />
-                    <h4 className="font-semibold text-sm truncate">{track.title}</h4>
-                    <p className="text-gray-400 text-xs truncate">{track.artist}</p>
-                  </motion.div>
-                ))}
+          {/* Content Area */}
+          <div className="p-6">
+            {activeSection === 'home' && (
+              <div>
+                <h3 className="text-xl font-semibold mb-6">Recently Played</h3>
+                <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                  {tracks?.slice(0, 12).map((track, index) => (
+                    <motion.div
+                      key={track.id}
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: index * 0.05 }}
+                      whileHover={{ scale: 1.05 }}
+                      className="bg-surface-800 p-4 rounded-lg cursor-pointer hover:bg-surface-700 transition-all"
+                    >
+                      <img 
+                        src={track.coverUrl || '/placeholder-cover.jpg'} 
+                        alt={track.album}
+                        className="w-full aspect-square object-cover rounded-lg mb-3"
+                      />
+                      <h4 className="font-semibold text-sm truncate">{track.title}</h4>
+                      <p className="text-gray-400 text-xs truncate">{track.artist}</p>
+                    </motion.div>
+                  ))}
+                </div>
               </div>
-            </div>
-          )}
+            )}
 
           {activeSection === 'search' && (
             <div>
@@ -189,10 +223,10 @@ const Home = ({ toggleDarkMode, darkMode }) => {
                     transition={{ delay: index * 0.05 }}
                     className="flex items-center gap-4 p-3 rounded-lg track-hover-glow group cursor-pointer"
                   >
-                    <div className="relative">
+<div className="relative">
                       <img 
-                        src={track.coverUrl} 
-                        alt={track.album}
+                        src={track.coverUrl || '/placeholder-cover.jpg'} 
+                        alt={track.album || 'Track cover'}
                         className="w-12 h-12 object-cover rounded"
                       />
                       <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded">
@@ -200,11 +234,13 @@ const Home = ({ toggleDarkMode, darkMode }) => {
                       </div>
                     </div>
                     <div className="flex-1">
-                      <h4 className="font-medium">{track.title}</h4>
-                      <p className="text-gray-400 text-sm">{track.artist}</p>
+                      <h4 className="font-medium">{track.title || 'Unknown Title'}</h4>
+                      <p className="text-gray-400 text-sm">{track.artist || 'Unknown Artist'}</p>
                     </div>
-                    <p className="text-gray-400 text-sm">{track.album}</p>
-                    <p className="text-gray-400 text-sm">{Math.floor(track.duration / 60)}:{(track.duration % 60).toString().padStart(2, '0')}</p>
+                    <p className="text-gray-400 text-sm">{track.album || 'Unknown Album'}</p>
+                    <p className="text-gray-400 text-sm">
+                      {track.duration ? `${Math.floor(track.duration / 60)}:${(track.duration % 60).toString().padStart(2, '0')}` : '0:00'}
+                    </p>
                   </motion.div>
                 ))}
               </div>
@@ -220,13 +256,13 @@ const Home = ({ toggleDarkMode, darkMode }) => {
                     key={playlist.id}
                     whileHover={{ scale: 1.02 }}
                     className="bg-surface-800 p-6 rounded-xl cursor-pointer hover:bg-surface-700 transition-all"
-                  >
+>
                     <img 
-                      src={playlist.coverUrl} 
-                      alt={playlist.name}
+                      src={playlist.coverUrl || '/placeholder-playlist.jpg'} 
+                      alt={playlist.name || 'Playlist cover'}
                       className="w-full aspect-square object-cover rounded-lg mb-4"
                     />
-                    <h4 className="font-semibold mb-2">{playlist.name}</h4>
+                    <h4 className="font-semibold mb-2">{playlist.name || 'Untitled Playlist'}</h4>
                     <p className="text-gray-400 text-sm">{playlist.tracks?.length || 0} tracks</p>
                   </motion.div>
                 ))}

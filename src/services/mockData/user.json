@@ -1,0 +1,43 @@
+{
+  "defaultUser": {
+    "id": 1,
+    "name": "Alex Johnson",
+    "email": "alex.johnson@soundwave.com",
+    "avatar": null,
+    "isLoggedIn": true,
+    "preferences": {
+      "theme": "dark",
+      "language": "en",
+      "notifications": true,
+      "autoplay": true,
+      "highQuality": false
+    },
+    "subscription": {
+      "type": "premium",
+      "expiresAt": "2024-12-31"
+    },
+    "stats": {
+      "totalListeningTime": "1,247 hours",
+      "favoriteGenre": "Electronic",
+      "topArtist": "Daft Punk"
+    }
+  },
+  "guestUser": {
+    "id": null,
+    "name": "Guest",
+    "email": null,
+    "avatar": null,
+    "isLoggedIn": false,
+    "preferences": {
+      "theme": "dark",
+      "language": "en",
+      "notifications": false,
+      "autoplay": false,
+      "highQuality": false
+    },
+    "subscription": {
+      "type": "free",
+      "expiresAt": null
+    }
+  }
+}
