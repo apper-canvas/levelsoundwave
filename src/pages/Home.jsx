@@ -4,7 +4,7 @@ import { Search, Play, Pause, SkipBack, SkipForward, Volume2, Moon, Sun, Heart, 
 import { motion } from 'framer-motion'
 import { toast } from 'react-toastify'
 import { trackService } from '@/services/api/trackService'
-import { albumService } from '@/services/api/albumService' 
+import albumService from '@/services/api/albumService'
 import { playlistService } from '@/services/api/playlistService'
 import ProfileButton from '@/components/ProfileButton'
 import MainFeature from '@/components/MainFeature'
